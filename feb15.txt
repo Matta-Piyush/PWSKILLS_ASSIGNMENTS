@@ -1,0 +1,65 @@
+Ans1
+Multiprocessing: Multiprocessing in Python refers to the concurrent execution of multiple processes. Each process runs independently with its own memory space, allowing parallel execution of tasks.
+
+Ans2
+Multiprocessing:
+Independent Memory: Processes have separate memory spaces.
+GIL: Python Global Interpreter Lock is not a concern.
+Parallelism: Suitable for CPU-bound tasks.
+Scalability: Better scalability with multiple CPUs.
+Multithreading:
+Shared Memory: Threads share the same memory space.
+GIL: Global Interpreter Lock can limit performance in CPU-bound tasks.
+Parallelism: Suitable for I/O-bound tasks.
+Scalability: Limited scalability due to GIL.
+
+Ans3
+import multiprocessing
+
+def print_number(number):
+    print(f"Process ID: {multiprocessing.current_process().pid}, Number: {number}")
+
+if __name__ == "__main__":
+    # Creating a process
+    process = multiprocessing.Process(target=print_number, args=(42,))
+
+    # Starting the process
+    process.start()
+
+    # Waiting for the process to finish
+    process.join()
+
+Ans4
+Multiprocessing Pool: A pool is a way to parallelize the execution of a function across multiple input values. It provides a convenient way to distribute work among a specified number of worker processes.
+
+Ans5
+import multiprocessing
+
+def square(x):
+    return x * x
+
+if __name__ == "__main__":
+    # Creating a pool with 3 worker processes
+    with multiprocessing.Pool(processes=3) as pool:
+        # Applying the square function to a list of numbers
+        result = pool.map(square, [1, 2, 3, 4, 5])
+        print("Result:", result)
+
+Ans6
+import multiprocessing
+
+def print_number(number):
+    print(f"Process ID: {multiprocessing.current_process().pid}, Number: {number}")
+
+if __name__ == "__main__":
+    # Creating 4 processes
+    processes = []
+
+    for i in range(1, 5):
+        process = multiprocessing.Process(target=print_number, args=(i,))
+        processes.append(process)
+        process.start()
+
+    # Waiting for all processes to finish
+    for process in processes:
+        process.join()
