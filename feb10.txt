@@ -1,0 +1,40 @@
+Ans-1
+In Python, the open() function is used to open a file. The open() function takes two parameters: the file name and the mode in which the file is to be opened.
+
+Modes of Opening a File:
+
+'r': Open for reading (default).
+'w': Open for writing. Truncates the file to zero length or creates a new file if it does not exist.
+'a': Open for writing. The file is created if it does not exist. The data being written will be appended to the end of the file.
+'b': Binary mode.
+'t': Text mode (default).
+'+': Open for reading and writing.
+
+Ans-2
+The close() function is used to close an open file. It is important to close a file to free up system resources and ensure that changes made to the file are saved. Failing to close a file can lead to resource leaks and data corruption.
+
+Ans-3
+with open('sample.txt', 'w') as file:
+    file.write('I want to become a Data Scientist')
+
+# Opening the file and reading its content
+with open('sample.txt', 'r') as file:
+    content = file.read()
+    print(content)
+
+Ans-4
+read(): Reads the entire content of the file as a string.
+readline(): Reads a single line from the file.
+readlines(): Reads all lines from the file and returns a list where each element is a line.
+
+Ans-5
+The with statement is used with open() to ensure that the file is properly closed after the operations are performed. It simplifies the management of resources and provides better exception handling.
+
+Advantages:
+
+Automatic closing of the file, even if an exception occurs.
+Cleaner and more readable code.
+
+Ans-6
+write(): Writes a string to the file.
+writelines(): Writes a list of strings to the file.
