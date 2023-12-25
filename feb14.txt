@@ -1,0 +1,54 @@
+Ans1
+Multithreading: Multithreading is a concurrent execution model where multiple threads run independently within a process. Each thread represents a separate flow of control, and threads within a process share the same data space.
+
+Ans2
+activeCount(): Returns the number of Thread objects currently alive.
+currentThread(): Returns the current Thread object corresponding to the caller's thread.
+enumerate(): Returns a list of all Thread objects currently alive.
+
+Ans3
+run(): Method representing the code executed by the thread.
+start(): Initiates the thread's activity.
+join(): Waits for the thread to finish.
+isAlive(): Returns True if the thread is still alive.
+
+Ans4
+import threading
+
+def print_squares():
+    for i in range(1, 6):
+        print(f"Square of {i}: {i*i}")
+
+def print_cubes():
+    for i in range(1, 6):
+        print(f"Cube of {i}: {i*i*i}")
+
+# Creating two threads
+thread1 = threading.Thread(target=print_squares)
+thread2 = threading.Thread(target=print_cubes)
+
+# Starting the threads
+thread1.start()
+thread2.start()
+
+# Waiting for both threads to finish
+thread1.join()
+thread2.join()
+
+Ans5
+Advantages:
+
+Improved Performance: Executes multiple tasks concurrently, potentially reducing execution time.
+Responsiveness: Allows concurrent handling of user interfaces, preventing freezing.
+Resource Sharing: Threads share the same memory space, making data sharing easier.
+Disadvantages:
+
+Complexity: Synchronization and coordination can introduce complexity and bugs.
+Resource Competition: Threads may compete for resources, leading to conflicts.
+Difficulty in Debugging: Debugging multithreaded applications can be challenging.
+
+Ans6
+Deadlocks: A deadlock occurs when two or more threads are blocked forever, each waiting for the other to release a resource.
+
+Race Conditions: A race condition occurs when multiple threads access shared data concurrently, and the final outcome depends on the order of execution.
+
