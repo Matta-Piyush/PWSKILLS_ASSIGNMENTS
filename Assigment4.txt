@@ -49,8 +49,7 @@ Inheritance is a mechanism in OOP that allows a new class (subclass) to inherit 
 
 Example of Types of Inheritance:
 
-python
-Copy code
+
 # Single Inheritance
 class Animal:
     def eat(self):
