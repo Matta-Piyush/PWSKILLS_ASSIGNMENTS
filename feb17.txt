@@ -1,0 +1,55 @@
+Ans1
+MongoDB: MongoDB is a NoSQL, document-oriented database that stores data in flexible, JSON-like documents.
+Non-Relational Databases:
+Structure: No fixed schema; data can be inserted without predefined structure.
+Scalability: Easily scalable horizontally by adding more servers.
+Types: Various types like document stores, key-value stores, wide-column stores, graph databases.
+Schema Flexibility: Dynamic schema allows fields to vary for each document.
+
+Ans2
+Document-Oriented: Stores data in flexible, JSON-like BSON documents.
+Dynamic Schema: Documents in a collection can have different fields.
+Indexing: Supports various types of indexes to improve query performance.
+Replication: Provides high availability through replica sets.
+
+Ans3
+from pymongo import MongoClient
+
+# Connecting to MongoDB
+client = MongoClient("mongodb://localhost:27017/")
+
+# Creating a database
+mydb = client["mydatabase"]
+
+# Creating a collection
+mycollection = mydb["mycollection"]
+
+Ans4
+# Inserting one record
+record_one = {"name": "piyush", "age": 25, "city": "Delhi"}
+mycollection.insert_one(record_one)
+
+# Inserting many records
+records_many = [
+    {"name": "Ram", "age": 30, "city": "Mumbai"},
+    {"name": "Rahul", "age": 22, "city": "Banglore"}
+]
+mycollection.insert_many(records_many)
+
+Ans5
+Querying Based on a Condition:
+result_query = mycollection.find({"age": {"$gt": 25}})
+for record in result_query:
+    print("Query Result:", record)
+
+Ans6
+Sorting in Ascending Order:
+
+result_sort_asc = mycollection.find().sort("age")
+for record in result_sort_asc:
+    print("Sorted Result (Asc):", record)
+
+# Sorting in Descending Order:
+result_sort_desc = mycollection.find().sort("age", -1)
+for record in result_sort_desc:
+    print("Sorted Result (Desc):", record)

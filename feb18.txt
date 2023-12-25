@@ -1,0 +1,50 @@
+ans1
+API (Application Programming Interface): An API is a set of rules that allows one software application to interact with another. It defines the methods and data formats that applications can use to request and exchange information.
+
+ans2
+Advantages:
+Interoperability: Enables communication and data exchange between different systems.
+Modularity: Allows developers to use pre-built components, enhancing efficiency.
+Easier Development: Reduces development time and effort by providing ready-made functionality.
+Disadvantages:
+Dependency: Applications relying on external APIs may be affected if the API changes.
+Limited Functionality: APIs may not provide all the functionality needed for a specific use case.
+Security Concerns: Poorly implemented or unauthorized use of APIs can pose security risks.
+
+ans3
+Web API: A Web API, or web service, is an API accessible over the web using standard protocols such as HTTP. It allows different software applications to communicate over the internet.
+
+Difference Between API and Web API:
+
+API: A broader term encompassing various types of interfaces, including those not necessarily web-based.
+Web API: Specifically refers to APIs accessible over the web using standard web protocols.
+
+ans4
+REST (Representational State Transfer):
+
+Architecture: Stateless client-server architecture.
+Communication: Relies on standard HTTP methods (GET, POST, PUT, DELETE).
+Data Format: Typically uses JSON for data format.
+Stateless: Each request from a client contains all the information needed to understand and fulfill the request.
+SOAP (Simple Object Access Protocol):
+
+Architecture: Follows a more rigid, protocol-based approach.
+Communication: Can use various protocols, including HTTP, SMTP, and more.
+Data Format: Uses XML for data format.
+Stateful: Can maintain state information between requests.
+
+ans5
+REST:
+
+Uses standard HTTP methods (GET, POST, PUT, DELETE).
+Stateless communication.
+Typically relies on JSON for data format.
+Lightweight and scalable.
+Easy to implement and understand.
+
+
+
+
+
+
+

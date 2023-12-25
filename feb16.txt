@@ -1,0 +1,95 @@
+Ans1
+Database: A database is a structured collection of data organized for efficient retrieval, storage, and management. It can be relational (SQL) or non-relational (NoSQL).
+
+SQL vs. NoSQL:
+
+SQL (Structured Query Language):
+Type: Relational Database Management System (RDBMS).
+Schema: Predefined schema.
+Data Storage: Tables with rows and columns.
+Examples: MySQL, PostgreSQL, SQLite.
+NoSQL:
+Type: Non-relational.
+Schema: Dynamic or schema-less.
+Data Storage: Various models (document, key-value, wide-column, graph).
+Examples: MongoDB, Cassandra, Redis.
+
+Ans2
+DDL: DDL is a subset of SQL used to define and manage the structure of a database.
+Examples:
+CREATE: Creates a new database object.
+DROP: Deletes an existing database object.
+ALTER: Modifies the structure of an existing database object.
+TRUNCATE: Removes all records from a table.
+
+Ans3
+DML: DML is a subset of SQL used to manage data stored in a database.
+Examples:
+INSERT: Adds new records to a table.
+UPDATE: Modifies existing records in a table.
+DELETE: Removes records from a table.
+
+Ans4
+DQL: DQL is a subset of SQL used to retrieve data from a database.
+Example:
+SELECT: Retrieves data from one or more tables.
+
+Ans5
+Primary Key: A primary key is a unique identifier for a record in a table. It ensures that each record is uniquely identified.
+
+sql
+Copy code
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT
+);
+Foreign Key: A foreign key establishes a link between two tables by referencing the primary key of another table.
+
+sql
+Copy code
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(50)
+);
+
+CREATE TABLE Enrollments (
+    EnrollmentID INT PRIMARY KEY,
+    StudentID INT,
+    CourseID INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
+);
+
+Ans6
+import mysql.connector
+
+# Establishing connection
+conn = mysql.connector.connect(
+    host="localhost",
+    user="username",
+    password="password",
+    database="dbname"
+)
+
+# Creating a cursor
+cursor = conn.cursor()
+
+# Executing a query
+cursor.execute("SELECT * FROM Students")
+
+# Fetching results
+results = cursor.fetchall()
+
+# Closing the connection
+conn.close()
+
+Ans7
+SELECT
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+LIMIT / OFFSET
+The clauses are executed in the specified order, allowing for the retrieval and manipulation of data in a structured manner.
