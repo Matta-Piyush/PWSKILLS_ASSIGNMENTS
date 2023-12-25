@@ -1,0 +1,37 @@
+Ans1
+The Exception class in Python serves as the base class for all exceptions. When creating a custom exception, it is beneficial to inherit from the Exception class to leverage its functionality and ensure consistency within the exception hierarchy. By inheriting from Exception, the custom exception gains access to common methods and attributes, facilitating uniformity and compatibility with exception handling mechanisms.
+
+Ans-2
+The Python Exception Hierarchy is organized in a tree-like structure, with the BaseException class at the root.
+
+Ans3
+The ArithmeticError class represents errors that occur during arithmetic operations. Two common errors within this class are:
+
+FloatingPointError: Raised when a floating-point operation fails.
+ZeroDivisionError: Raised when division or modulo operation is performed with zero as the divisor.
+
+Ans4
+The LookupError class is the base class for errors that occur when a key or index used to access a collection is invalid. Two subclasses are IndexError and KeyError.
+
+Ans5
+ImportError: Raised when an import statement fails to find or load a module.
+ModuleNotFoundError: A subclass of ImportError specifically raised when a module is not found.
+
+Ans6
+Specificity: Catch specific exceptions rather than using a generic except block.
+Avoid Bare except: Refrain from using except: without specifying the exception type.
+Cleanup with finally: Use the finally block for cleanup code that must execute regardless of exceptions.
+Logging: Consider logging exceptions for debugging purposes.
+Handle Exceptions Locally: Handle exceptions at the appropriate level; don't catch an exception unless you can handle it locally.
+Avoid Deep Nesting: Avoid deep nesting of try, except, else, and finally blocks for better readability.
+Use with Statement: Leverage the with statement for better resource management (e.g., file handling).
+Custom Exceptions: Create and use custom exceptions for application-specific error handling.
+Avoid Hiding Errors: Be cautious when using a bare except clause to avoid hiding unexpected errors.
+Readability: Write clear and concise exception messages for better understanding.
+These best practices contribute to writing robust and maintainable code with effective exception handling.
+
+
+
+
+
+
