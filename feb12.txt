@@ -1,0 +1,52 @@
+Ans-1
+An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions. When an error occurs, Python generates an exception, which can be caught and handled.
+
+Difference Between Exceptions and Syntax Errors:
+
+Syntax Errors: These are errors in the syntax of the code. The interpreter cannot execute code with syntax errors, and they are usually caught before the program runs.
+
+Exceptions: These are errors that occur during the execution of a program. They are not syntax errors, and they can be handled using exception handling mechanisms.
+
+Ans-2
+If an exception is not handled, it propagates up the call stack, and the program terminates. This can lead to abrupt termination and loss of information about the cause of the error.
+
+Ans-3
+try: Contains the code that might raise an exception.
+except: Contains the code to handle the exception.
+else: Contains the code to be executed if no exception occurs.
+finally: Contains the code that will be executed regardless of whether an exception occurred or not.
+Ans-4
+try:
+    age = int(input("Enter your age: "))
+    if age < 0:
+        raise ValueError("Age cannot be negative.")
+except ValueError as ve:
+    print(f"Error: {ve}")
+else:
+    print("Age entered successfully.")
+finally:
+    print("This will execute no matter what.")
+
+Ans-5
+Custom Exceptions: These are user-defined exceptions that can be created by inheriting from the Exception class or its subclasses.
+Need for Custom Exceptions: Custom exceptions allow you to define specific error types for your application and provide more meaningful error messages.
+
+Ans-6
+class CustomError(Exception):
+    def __init__(self, message="A custom error occurred."):
+        self.message = message
+        super().__init__(self.message)
+
+def example_function():
+    try:
+        # Simulate an error
+        raise CustomError("This is a custom error.")
+    except CustomError as ce:
+        print(f"Custom Error Caught: {ce}")
+
+
+
+
+
+
+
