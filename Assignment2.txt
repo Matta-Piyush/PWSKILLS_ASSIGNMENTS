@@ -1,0 +1,73 @@
+Ans-1
+The def keyword is used to create a function in Python.
+
+def get_odd_numbers():
+    return [num for num in range(1, 26) if num % 2 != 0]
+
+odd_numbers_list = get_odd_numbers()
+
+Ans-2
+*args is used to pass a variable number of non-keyword arguments to a function.
+**kwargs is used to pass a variable number of keyword arguments to a function.
+*Function for args:
+
+def print_args(*args):
+    for arg in args:
+        print(arg)
+
+print_args(1, 'hello', 3.14, [4, 5])
+
+**Function for kwargs:
+
+def print_kwargs(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_kwargs(name='John', age=25, city='New York')
+
+Ans-3
+An iterator in Python is an object that can be iterated (looped) over. It implements the methods __iter__() for initialization and __next__() for iteration.
+
+Iterator Initialization and Iteration:
+
+my_list = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+my_iter = iter(my_list)
+
+# Print the first five elements
+for i in range(5):
+    print(next(my_iter))
+
+Ans-4
+A generator function is a special kind of iterator that yields values one at a time using the yield keyword. It allows you to iterate over a potentially large sequence of data without loading the entire sequence into memory.
+
+Example of a Generator Function:
+
+def generate_numbers():
+    for i in range(5):
+        yield i
+
+gen = generate_numbers()
+for num in gen:
+    print(num)
+
+Ans-5
+def generate_primes():
+    primes = []
+    num = 2
+    while True:
+        if all(num % prime != 0 for prime in primes):
+            yield num
+            primes.append(num)
+        num += 1
+
+# Using the generator function to print the first 20 prime numbers
+prime_gen = generate_primes()
+for _ in range(20):
+    print(next(prime_gen))
+This generator function generates prime numbers on the fly, and the next() method is used to obtain the next prime number in the sequence.
+
+
+
+
+
+

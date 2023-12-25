@@ -1,0 +1,52 @@
+Ans-1
+Tuples are ordered collections of elements.
+Elements in a tuple can be of different data types.
+Tuples are immutable, meaning their values cannot be changed or modified after creation.
+
+Ans-2
+Two common tuple methods in Python are count() and index().
+Example-
+a=(2,3,4,5,3,4,3,4,5)
+print(a.count(3)    ## 3
+print(a.index(5))   ## 3
+
+Ans-3
+The set data type in Python does not allow duplicate items.
+List = [1, 1, 1, 2, 1, 3, 1, 4, 2, 1, 2, 2, 2, 3, 2, 4, 3, 1, 3, 2, 3, 3, 3, 4, 4, 1, 4, 2, 4, 3, 4, 4]
+s=set(List)
+unique_list=list(s)
+
+Ans-4
+The union() method returns a new set containing the union of two sets.
+The update() method adds elements from another set (or iterable) to the current set
+
+s1={1,2,3}
+s2={3,4,5,7}
+
+s1.union(s2)
+s1.update(s2)
+
+Ans-5
+A dictionary in Python is an unordered collection of key-value pairs. Each key must be unique within the dictionary, and it is used to access its corresponding value.
+d={'abc':1,'def':2}
+
+Ans-6
+Yes
+nested_dict = {'food': {'pizza': 259, 'burger': 130, 'ice cream': {'vanilla': 45, 'mango': 50}}}
+
+Ans-7
+The three view objects in dictionaries are dict_keys, dict_values, and dict_items.
+
+Examples of View Objects:
+
+dict1 = {'Sport': 'Cricket', 'Teams': ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand']}
+
+# View Keys
+keys_view = dict1.keys()
+
+# View Values
+values_view = dict1.values()
+
+# View Items
+items_view = dict1.items()
+
